@@ -1,0 +1,40 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do List</title>
+    <link rel="stylesheet" href="style.css">
+ 
+ </head>
+ <body>
+
+    <div class="container">
+    <h2>🎓 Student To-Do List</h2>
+
+    <div class="form-group">
+      <label for="name">👤 Student Name</label>
+      <input type="text" id="name" placeholder="Enter name">
+
+      <label for="email">📧 Email</label>
+      <input type="email" id="email" placeholder="Enter email">
+
+      <button class="btn-save" onclick="saveStudent()">💾 Save Student</button>
+    </div>
+
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Student rows appear here -->
+      </tbody>
+    </table>
+  </div>
+      <script src="script.js"></script>
+ </body>
+ </html>

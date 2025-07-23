@@ -1,0 +1,143 @@
+ * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      padding: 12px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #00aaff;
+      outline: none;
+    }
+
+    .btn-save {
+      padding: 12px;
+      background-color: #00c853;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-save:hover {
+      background-color: #009624;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #6200ea;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
+    }
+
+    .btn-delete {
+      background-color: #d32f2f;
+      color: white;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .btn-delete:hover {
+      background-color: #b71c1c;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .form-group {
+        flex-direction: column;
+      }
+
+      input, .btn-save {
+        width: 100%;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fefefe;
+      }
+
+      td {
+        text-align: left;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        font-weight: bold;
+        color: #444;
+      }
+    }
